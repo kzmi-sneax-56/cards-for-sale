@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Kzmi Cards | Football and F1 cards for sale</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link href="https://fonts.googleapis.com/css2?family=Titillium+Web:ital,wght@0,400;0,600;1,700;1,900&family=Instrument+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+:root{box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+--bg:#fff;--soft:#f2f8f4;--ink:#13211a;--grass:#1fa45a;--grass2:#d8f0e1;--red:#e10600;--red2:#ffe3e1;--line:#e3e8e4;--muted:#5f6f66}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:"Instrument Sans",Arial,sans-serif;line-height:1.5}
+h1,h2,h3,.logo,.pr{font-family:"Titillium Web",Arial,sans-serif;font-style:italic;font-weight:900;margin:0;line-height:1}
+a{color:inherit}
+.chk{height:14px;background:repeating-conic-gradient(var(--ink) 0 25%,#fff 0 50%) 0 0/28px 28px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:12px 5vw;background:rgba(255,255,255,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);position:sticky;top:env(safe-area-inset-top,0px);z-index:5}
+.logo{font-size:26px;text-decoration:none;display:flex;align-items:center;gap:8px}
+.logo i{display:inline-block;width:12px;height:26px;background:linear-gradient(90deg,var(--grass) 50%,var(--red) 50%);transform:skewX(-14deg)}
+nav div{display:flex;gap:16px;align-items:center;font-size:15px;font-weight:600}
+.btn{display:inline-flex;align-items:center;gap:8px;justify-content:center;background:var(--ink);color:#fff;border:0;border-radius:6px;padding:12px 22px;font:700 15px "Titillium Web",Arial,sans-serif;text-decoration:none;cursor:pointer;transform:skewX(-8deg)}
+.btn.g{background:var(--grass)}.btn.r{background:var(--red)}.btn.alt{background:#fff;color:var(--ink);border:2px solid var(--ink)}
+.btn.ig{background:linear-gradient(45deg,#f9a03f,#e1306c 55%,#833ab4)}
+.btn svg{width:18px;height:18px;flex:none}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+/* hero scene */
+.hero{position:relative;overflow:hidden;min-height:620px;padding:6vw 5vw 150px;background:radial-gradient(circle at 10% 0,rgba(255,252,210,.95),transparent 30%),radial-gradient(circle at 92% 0,rgba(255,252,210,.9),transparent 28%),linear-gradient(#bfe2ff,#f4faff 62%);background-size:cover;background-position:center}
+.hero.photo{background-image:linear-gradient(90deg,rgba(255,255,255,.9),rgba(255,255,255,.35)),var(--hp)}
+.hero.photo .scene{display:none}
+.scene{position:absolute;inset:0;pointer-events:none}
+.pw{position:absolute;left:0;right:0;bottom:0;height:40%;overflow:hidden;perspective:520px}
+.pw:before{content:"";position:absolute;inset:-60% -30% 0;background:repeating-linear-gradient(90deg,#33bf6c 0 110px,#28a65d 110px 220px);transform:rotateX(60deg);transform-origin:bottom}
+.pw:after{content:"";position:absolute;left:0;right:0;top:0;height:35%;background:linear-gradient(#f4faff,rgba(244,250,255,0))}
+.track{position:absolute;right:0;bottom:0;width:62%;height:64px;background:#2a2f33;border-top:10px solid transparent;border-image:repeating-linear-gradient(90deg,var(--red) 0 24px,#fff 24px 48px) 1;box-shadow:0 -6px 18px rgba(0,0,0,.18)}
+.track:after{content:"";position:absolute;left:0;right:0;top:26px;height:4px;background:repeating-linear-gradient(90deg,#fff 0 40px,transparent 40px 80px);opacity:.8}
+.ballh{position:absolute;left:3%;bottom:60px;width:min(200px,28vw);filter:drop-shadow(0 18px 12px rgba(0,0,0,.35));animation:roll 5s ease-in-out infinite alternate}
+@keyframes roll{from{transform:translateX(0) rotate(0)}to{transform:translateX(70px) rotate(150deg)}}
+.carh{position:absolute;right:-10px;bottom:26px;width:min(600px,66vw);animation:drive 1.6s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 10px 8px rgba(0,0,0,.3))}
+@keyframes drive{from{transform:translateX(115%)}to{transform:none}}
+.hero-in{position:relative;z-index:2;display:grid;grid-template-columns:1.05fr .95fr;gap:4vw;align-items:start}
+.hero h1{font-size:clamp(46px,8.5vw,104px);text-transform:uppercase;letter-spacing:-1px;text-shadow:0 2px 0 rgba(255,255,255,.7)}
+.hero h1 span{color:var(--grass)}.hero h1 em{color:var(--red)}
+.hero p{max-width:46ch;font-size:19px;color:#3f4f46;margin:18px 0 26px}
+.row{display:flex;gap:12px;flex-wrap:wrap}
+.stack{position:relative;height:300px}
+.fc{position:absolute;width:150px;aspect-ratio:5/7;border-radius:12px;border:5px solid #fff;box-shadow:0 14px 28px rgba(0,0,0,.28);overflow:hidden;display:flex;align-items:flex-end;padding:10px;color:#fff;font:900 italic 20px "Titillium Web",Arial,sans-serif;cursor:pointer}
+.fc .art{position:absolute;left:12%;top:14%;width:76%}
+.fc.a{left:8%;top:30px;transform:rotate(-9deg)}.fc.b{left:34%;top:0;transform:rotate(3deg);z-index:2}.fc.c{left:60%;top:34px;transform:rotate(11deg)}
+.fa{background:repeating-linear-gradient(90deg,#33bf6c 0 22px,#28a65d 22px 44px)}
+.fb{background:radial-gradient(circle at 50% 40%,#ff4a3d,#8f0500)}
+.fc:after,.ph:after{content:"";position:absolute;inset:0;background:linear-gradient(115deg,transparent 35%,rgba(255,255,255,.5) 48%,rgba(255,190,255,.25) 52%,transparent 65%);background-size:260% 100%;background-position:120% 0;transition:background-position .6s;pointer-events:none}
+.fc:hover:after,.p:hover .ph:after{background-position:-20% 0}
+.strip{background:var(--ink);color:#fff;padding:14px 5vw;display:flex;gap:24px;flex-wrap:wrap;justify-content:space-between;font-weight:600;font-size:15px}
+section{padding:6vw 5vw}
+.head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;margin-bottom:24px}
+.head h2,.contact h2,.story h2{font-size:clamp(34px,5vw,56px);text-transform:uppercase}
+.chips{display:flex;gap:8px;flex-wrap:wrap}
+.chip{background:#fff;border:2px solid var(--line);color:var(--ink);border-radius:6px;padding:8px 18px;font:700 15px "Titillium Web",Arial,sans-serif;cursor:pointer}
+.chip[aria-pressed="true"][data-c="All"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.chip[aria-pressed="true"][data-c="Football"]{background:var(--grass);color:#fff;border-color:var(--grass)}
+.chip[aria-pressed="true"][data-c="F1"]{background:var(--red);color:#fff;border-color:var(--red)}
+#grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:22px}
+.p{background:#fff;border:1px solid var(--line);border-radius:14px;overflow:hidden;display:flex;flex-direction:column;box-shadow:0 4px 14px rgba(20,40,30,.08)}
+.p.F1{border-bottom:5px solid var(--red)}.p.Football{border-bottom:5px solid var(--grass)}
+.ph{aspect-ratio:5/6;position:relative;overflow:hidden;background:var(--line) center/cover}
+.ph .art{position:absolute;left:14%;top:12%;width:72%;filter:drop-shadow(0 10px 8px rgba(0,0,0,.35))}
+.tag{position:absolute;left:10px;top:10px;background:#fff;color:var(--ink);border-radius:4px;padding:3px 10px;font:700 12px "Titillium Web",Arial,sans-serif;text-transform:uppercase;z-index:1}
+.plate{position:absolute;left:0;right:0;bottom:0;padding:34px 14px 12px;background:linear-gradient(transparent,rgba(0,0,0,.8));color:#fff;z-index:1}
+.plate b{display:block;font:900 italic 22px "Titillium Web",Arial,sans-serif}
+.plate small{opacity:.85}
+.pb{padding:14px 16px 16px;display:flex;flex-direction:column;gap:2px;flex:1}
+.pb small{color:var(--muted);font-size:14px}
+.pr{font-size:28px;margin:6px 0 12px}.F1 .pr{color:var(--red)}.Football .pr{color:var(--grass)}
+.pb .btn{margin-top:auto}
+.rm{display:none;margin-top:8px;background:#fff;border:2px solid var(--red);color:var(--red);border-radius:6px;padding:8px;font:700 14px "Titillium Web",Arial,sans-serif;cursor:pointer}
+body.edit .rm{display:block}
+.empty{grid-column:1/-1;text-align:center;padding:50px 10px;border:2px dashed var(--line);border-radius:14px;color:var(--muted)}
+#admin{display:none;background:var(--soft);border:2px solid var(--grass);border-radius:14px;padding:20px;margin-bottom:30px}
+body.edit #admin{display:block}
+#admin h3{font-size:24px;margin:6px 0 12px;text-transform:uppercase}
+.fg{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px}
+label{display:flex;flex-direction:column;gap:4px;font-size:14px;color:var(--muted)}
+input,select{font:inherit;color:var(--ink);background:#fff;border:1.5px solid var(--line);border-radius:8px;padding:10px;width:100%}
+/* gallery */
+.gal{background:var(--soft)}
+#gal{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:16px}
+.g{position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/3;display:flex;align-items:center;justify-content:center;background:center/cover;box-shadow:0 4px 14px rgba(20,40,30,.12)}
+.g.big{grid-column:span 2}
+.g .art{width:60%;filter:drop-shadow(0 10px 8px rgba(0,0,0,.35));transition:transform .35s}
+.g:hover .art{transform:scale(1.08)}
+.g span{position:absolute;left:12px;bottom:10px;color:#fff;font:900 italic 20px "Titillium Web",Arial,sans-serif;text-shadow:0 2px 6px rgba(0,0,0,.5)}
+.t1{background:radial-gradient(circle at 50% 40%,#555d63,#14181b)}.t2{background:repeating-linear-gradient(90deg,#33bf6c 0 40px,#28a65d 40px 80px)}
+.t3{background:linear-gradient(150deg,#ff5a4d,#7d0400)}.t4{background:radial-gradient(circle at 50% 35%,#fff3c4,#e2a92d)}
+.rmg{display:none;position:absolute;right:8px;top:8px;background:#fff;border:2px solid var(--red);color:var(--red);border-radius:6px;padding:4px 10px;font:700 13px "Titillium Web",Arial,sans-serif;cursor:pointer;z-index:2}
+body.edit .rmg.u{display:block}
+.story{display:grid;grid-template-columns:1fr 1fr;gap:5vw}
+.story p{color:var(--muted);font-size:18px;max-width:50ch}
+.pts{display:grid;gap:18px}.pts h3{font-size:22px;text-transform:uppercase}.pts p{margin:2px 0 0;font-size:16px}
+.contact{text-align:center;background:linear-gradient(105deg,var(--grass2),var(--red2))}
+.contact p{max-width:50ch;margin:12px auto 22px;color:#3f4f46}
+.contact .row{justify-content:center}
+.handle{display:inline-block;margin:0 0 18px;font:900 italic 30px "Titillium Web",Arial,sans-serif;background:#fff;padding:10px 24px;border-radius:99px;box-shadow:0 6px 18px rgba(0,0,0,.12);text-decoration:none}
+footer{padding:30px 5vw;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:var(--muted);font-size:14px}
+/* motion */
+.p,.chip,.btn,.pts>div,.g{transition:transform .25s ease,box-shadow .25s ease}
+.p:hover,.p:focus-within{transform:scale(1.045);box-shadow:0 16px 34px rgba(20,40,30,.22);position:relative;z-index:2}
+.chip:hover,.chip:focus-visible{transform:scale(1.12)}
+.btn:hover{transform:skewX(-8deg) scale(1.07)}
+.pts>div:hover,.g:hover{transform:scale(1.04)}
+.ph{transition:background-size .35s}.p:hover .ph{background-size:112%}
+.fx{position:fixed;font-size:22px;pointer-events:none;z-index:99;animation:fx .9s ease-out forwards}
+@keyframes fx{to{transform:translate(var(--dx),var(--dy)) rotate(360deg);opacity:0}}
+.ride{position:fixed;left:-200px;top:40vh;z-index:99;pointer-events:none;font-size:56px;animation:ride 1.3s ease-in forwards}
+.ride.ball{animation:rollx 1.5s linear forwards}
+@keyframes ride{to{transform:translateX(calc(100vw + 400px))}}
+@keyframes rollx{to{transform:translateX(calc(100vw + 400px)) rotate(900deg)}}
+.fc.spin{animation:spin .7s ease}
+@keyframes spin{50%{transform:rotateY(180deg) scale(1.08)}}
+#toast{position:fixed;left:50%;bottom:calc(24px + env(safe-area-inset-bottom,0px));transform:translate(-50%,40px);background:var(--ink);color:#fff;padding:12px 20px;border-radius:8px;opacity:0;transition:.25s;z-index:100;font-weight:600;max-width:90vw;text-align:center}
+#toast.on{opacity:1;transform:translate(-50%,0)}
+@media(prefers-reduced-motion:reduce){.ballh,.carh,.fc.spin{animation:none}.p,.chip,.btn,.g,.g .art,.pts>div{transition:none}.p:hover,.chip:hover,.btn:hover,.g:hover,.pts>div:hover,.g:hover .art{transform:none}}
+@media(max-width:760px){.hero-in,.story{grid-template-columns:1fr}.hero{padding-bottom:130px}.stack{height:230px}.fc{width:112px;font-size:16px}.g.big{grid-column:span 1}nav div a.hide{display:none}}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs>
+<radialGradient id="gb" cx=".35" cy=".3" r=".8"><stop offset="0" stop-color="#fff"/><stop offset=".7" stop-color="#e3e8e5"/><stop offset="1" stop-color="#a3aea8"/></radialGradient>
+<linearGradient id="gr" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#ff3b2f"/><stop offset="1" stop-color="#a80500"/></linearGradient>
+<linearGradient id="gd" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#fff0a8"/><stop offset=".5" stop-color="#e8b53a"/><stop offset="1" stop-color="#a87412"/></linearGradient>
+<radialGradient id="gt"><stop offset=".55" stop-color="#2b3035"/><stop offset="1" stop-color="#0d0f11"/></radialGradient>
+<symbol id="ball" viewBox="0 0 200 200"><circle cx="100" cy="100" r="95" fill="url(#gb)" stroke="#1b2620" stroke-width="3"/><polygon points="100,62 136,88 122,130 78,130 64,88" fill="#1b2620"/><path d="M100 62V8M136 88L192 70M122 130L156 180M78 130L44 180M64 88L8 70" stroke="#1b2620" stroke-width="3" fill="none"/><path d="M58 32Q100 6 142 32" stroke="#fff" stroke-width="7" fill="none" opacity=".7" stroke-linecap="round"/></symbol>
+<symbol id="car" viewBox="0 0 420 140"><ellipse cx="210" cy="130" rx="195" ry="7" fill="rgba(0,0,0,.25)"/><rect x="12" y="22" width="14" height="52" fill="#1b2620"/><rect x="2" y="18" width="56" height="9" fill="url(#gr)"/><path d="M30 94L112 84L152 58L198 55L218 74L346 84L398 96L398 108L30 108Z" fill="url(#gr)"/><path d="M112 84L150 40L174 40L168 62Z" fill="#b30500"/><path d="M120 92L318 96L318 104L120 102Z" fill="#fff" opacity=".9"/><path d="M158 58Q186 26 222 60" fill="none" stroke="#1b2620" stroke-width="6"/><circle cx="190" cy="54" r="11" fill="#ffd23a" stroke="#1b2620" stroke-width="3"/><rect x="348" y="106" width="70" height="8" fill="#1b2620"/><rect x="392" y="98" width="6" height="16" fill="#1b2620"/><circle cx="92" cy="108" r="28" fill="url(#gt)"/><circle cx="92" cy="108" r="12" fill="#cfd5d2"/><circle cx="92" cy="108" r="3" fill="#1b2620"/><circle cx="322" cy="110" r="25" fill="url(#gt)"/><circle cx="322" cy="110" r="11" fill="#cfd5d2"/><circle cx="322" cy="110" r="3" fill="#1b2620"/></symbol>
+<symbol id="helmet" viewBox="0 0 200 200"><path d="M30 120Q30 40 105 36Q172 36 176 112L176 140Q176 162 150 162L70 162Q30 160 30 120Z" fill="url(#gr)"/><path d="M70 92Q130 80 176 98L176 128Q120 120 72 132Z" fill="#10171a"/><path d="M40 70Q100 22 160 60" stroke="#fff" stroke-width="8" fill="none"/><ellipse cx="80" cy="64" rx="26" ry="10" fill="#fff" opacity=".35" transform="rotate(-20 80 64)"/></symbol>
+<symbol id="trophy" viewBox="0 0 200 200"><path d="M60 30H140V80Q140 118 100 126Q60 118 60 80Z" fill="url(#gd)"/><path d="M60 44H34Q34 90 66 96M140 44H166Q166 90 134 96" stroke="#d29a26" stroke-width="8" fill="none"/><rect x="92" y="126" width="16" height="30" fill="url(#gd)"/><rect x="62" y="156" width="76" height="16" rx="4" fill="#8a5a0c"/><path d="M76 40Q80 90 96 108" stroke="#fff" stroke-width="6" fill="none" opacity=".6"/></symbol>
+<symbol id="boot" viewBox="0 0 200 120"><path d="M10 80L30 20L72 16L78 44L122 56Q182 62 192 86L192 100L10 100Z" fill="#14201a"/><rect x="10" y="96" width="182" height="10" rx="3" fill="#ff5a2b"/><path d="M40 28L70 40M46 40L74 52M52 52L82 62" stroke="#fff" stroke-width="3"/><path d="M26 108v8M60 108v8M96 108v8M132 108v8M168 108v8" stroke="#6b756f" stroke-width="6"/></symbol>
+</defs></svg>
+
+<nav><a class="logo" href="#top"><i></i><span id="brand">Kzmi Cards</span></a>
+<div><a class="hide" href="#shop">Shop</a><a class="hide" href="#gallery">Gallery</a><a class="hide" href="#contact">Contact</a><a class="btn ig" id="navig" target="_blank" rel="noopener" href="https://www.instagram.com/kzmi.sneax/"><svg viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="#fff"/></svg>Instagram</a><button class="btn alt" id="tog">Manage store</button></div></nav>
+<div class="chk"></div>
+
+<header class="hero" id="top">
+<div class="scene"><div class="pw"></div><svg class="ballh" viewBox="0 0 200 200"><use href="#ball"/></svg><div class="track"></div><svg class="carh" viewBox="0 0 420 140"><use href="#car"/></svg></div>
+<div class="hero-in">
+<div><h1><span>Football</span><br>&amp; <em>F1</em><br>cards.</h1>
+<p>Rookies, legends and race-day heroes. Every card is photographed, graded honestly and ready to ship.</p>
+<div class="row"><a class="btn g" href="#shop">Shop cards</a><a class="btn ig buy" id="dm" target="_blank" rel="noopener" href="https://ig.me/m/kzmi.sneax" data-msg="Hi!%20I%27m%20interested%20in%20your%20cards.">DM on Instagram</a></div></div>
+<div class="stack" aria-hidden="true"><div class="fc a fa"><svg class="art" viewBox="0 0 200 200"><use href="#ball"/></svg>Striker</div><div class="fc b fb"><svg class="art" viewBox="0 0 200 200"><use href="#helmet"/></svg>Pole</div><div class="fc c fa"><svg class="art" viewBox="0 0 200 200"><use href="#trophy"/></svg>Legend</div></div>
+</div></header>
+<div class="chk"></div>
+<div class="strip"><span>Honest condition grading</span><span>Sleeved and shipped safely</span><span>New cards on the grid often</span></div>
+
+<section id="shop">
+<div id="admin">
+<h3>Add a card</h3>
+<form id="f"><div class="fg">
+<label>Sport<select id="sport"><option>Football</option><option>F1</option></select></label>
+<label>Player / driver<input id="player" required placeholder="Player or driver name"></label>
+<label>Set / year<input id="set" placeholder="Topps Chrome 2023"></label>
+<label>Type<select id="cat"><option>Rookie</option><option>Legend</option><option>Insert</option><option>Graded</option></select></label>
+<label>Condition<select id="cond"><option>Mint</option><option>Near mint</option><option>Excellent</option><option>Good</option><option>Played</option></select></label>
+<label>Price (₹)<input id="price" type="number" min="0" step="any" required placeholder="500"></label>
+<label>Card photo<input id="img" type="file" accept="image/*"></label>
+</div><p><button class="btn g" type="submit">Add card</button></p></form>
+<h3>Store details</h3>
+<div class="fg">
+<label>Store name<input id="sname" placeholder="Kzmi Cards"></label>
+<label>Instagram username<input id="ig" placeholder="kzmi.sneax"></label>
+<label>WhatsApp (optional, with country code)<input id="wa" placeholder="919876543210"></label>
+</div>
+<h3>Photos</h3>
+<div class="fg">
+<label>Top banner photo<input id="hp" type="file" accept="image/*"></label>
+<label>Add gallery photo<input id="gp" type="file" accept="image/*"></label>
+<label>&nbsp;<button class="btn alt" type="button" id="hpx">Remove banner photo</button></label>
+</div>
+<p style="font-size:14px;color:var(--muted)">Remove buttons now show on your cards and photos. Tap Done when finished.</p>
+</div>
+<div class="head"><h2>The grid</h2><div class="chips" id="chips"></div></div>
+<div id="grid"></div>
+</section>
+
+<section class="gal" id="gallery"><div class="head"><h2>Paddock &amp; pitch</h2></div><div id="gal"></div></section>
+
+<section class="story" id="about">
+<div><h2>Collected with care. Sold with honesty.</h2><p style="margin-top:16px">Every card comes from a real collection. Photos show the actual card you get, and condition is described plainly so there are no surprises.</p></div>
+<div class="pts">
+<div><h3>Real photos</h3><p>What you see is the exact card.</p></div>
+<div><h3>Safe packing</h3><p>Penny sleeve, top loader, stiff mailer.</p></div>
+<div><h3>Easy buying</h3><p>Tap Message to buy on any card and we sort the rest over Instagram.</p></div>
+</div></section>
+
+<section class="contact" id="contact"><h2>Buy on Instagram</h2><p>Found a card you want? Send us a DM with the card name. We reply with payment and shipping details.</p>
+<a class="handle" id="hname" target="_blank" rel="noopener" href="https://www.instagram.com/kzmi.sneax/">@kzmi.sneax</a>
+<div class="row"><a class="btn ig" id="igbtn" target="_blank" rel="noopener" href="https://www.instagram.com/kzmi.sneax/">Follow on Instagram</a><a class="btn g" id="igdm" target="_blank" rel="noopener" href="https://ig.me/m/kzmi.sneax">Send a DM</a></div></section>
+<footer><span id="fname">Kzmi Cards</span><a id="igl" target="_blank" rel="noopener" href="https://www.instagram.com/kzmi.sneax/">Instagram @kzmi.sneax</a><span>All cards sold as described.</span></footer>
+<div id="toast" role="status"></div>
+
+<script>
+var $=function(i){return document.getElementById(i)};
+var DEF="kzmi.sneax",VB={ball:"0 0 200 200",car:"0 0 420 140",helmet:"0 0 200 200",trophy:"0 0 200 200",boot:"0 0 200 120"};
+var cards,S={name:"",wa:"",ig:""},filter="All",CATS=["All","Football","F1"],gal=[],hero="";
+function ld(k,d){try{var v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}}
+function sv(k,v){try{localStorage.setItem(k,JSON.stringify(v));return true}catch(e){return false}}
+cards=ld("mc3_cards",ld("mc2_cards",null));S=ld("mc_set",S);gal=ld("mc3_gal",[]);hero=ld("mc3_hero","");
+if(!cards){cards=[{id:1,sport:"Football",player:"Sample Striker",set:"Sample set 2024",cat:"Rookie",cond:"Mint",price:1200},{id:2,sport:"F1",player:"Sample Driver",set:"Sample Turbo 2023",cat:"Insert",cond:"Near mint",price:2500},{id:3,sport:"Football",player:"Sample Legend",set:"Sample set 2010",cat:"Legend",cond:"Excellent",price:3500},{id:4,sport:"F1",player:"Sample Champion",set:"Sample set 2021",cat:"Graded",cond:"Mint",price:6000}]}
+function esc(s){var d=document.createElement("div");d.textContent=s==null?"":s;return d.innerHTML}
+function art(id){return '<svg class="art" viewBox="'+VB[id]+'"><use href="#'+id+'"/></svg>'}
+function handle(){var h=(S.ig||"").trim().replace(/^https?:\/\/(www\.)?instagram\.com\//i,"").replace(/^@/,"").split(/[\/?]/)[0];return h||DEF}
+function link(t){return "https://ig.me/m/"+handle()}
+var CAR='<svg viewBox="0 0 420 140" width="190"><use href="#car"/></svg>';
+var TILES=[{s:"car",c:"t1",cap:"Race day",big:1},{s:"ball",c:"t2",cap:"Matchday"},{s:"helmet",c:"t3",cap:"Grid heroes"},{s:"trophy",c:"t4",cap:"Silverware"},{s:"boot",c:"t2",cap:"Golden boot",big:1}];
+function render(){
+  $("chips").innerHTML=CATS.map(function(c){return '<button class="chip" data-c="'+c+'" aria-pressed="'+(c===filter)+'">'+c+'</button>'}).join("");
+  var l=cards.filter(function(c){return filter==="All"||(c.sport||"Football")===filter});
+  $("grid").innerHTML=l.length?l.map(function(c){
+    var sp=c.sport||"Football",inner=c.img?"":art(sp==="F1"?"helmet":"ball"),bg=c.img?'background-image:url('+c.img+')':'',cl=c.img?'':(sp==="F1"?'fb':'fa');
+    return '<article class="p '+sp+'"><div class="ph '+cl+'" style="'+bg+'">'+inner+'<span class="tag">'+sp+' · '+esc(c.cat)+'</span><div class="plate"><b>'+esc(c.player)+'</b><small>'+esc(c.set||"")+'</small></div></div><div class="pb"><small>Condition: '+esc(c.cond)+'</small><div class="pr">₹'+Number(c.price).toLocaleString("en-IN")+'</div><a class="btn buy ig" target="_blank" rel="noopener" data-msg="'+encodeURIComponent("Hi! I want to buy the "+c.player+" card ("+(c.set||"")+") for ₹"+c.price)+'" href="'+link()+'">Message to buy</a><button class="rm" data-id="'+c.id+'">Remove card</button></div></article>';
+  }).join(""):'<div class="empty">No cards here yet. Tap Manage store to add one.</div>';
+  $("gal").innerHTML=TILES.map(function(t){return '<div class="g '+t.c+(t.big?' big':'')+'">'+art(t.s)+'<span>'+t.cap+'</span></div>'}).join("")+gal.map(function(g,i){return '<div class="g'+(i%3===0?' big':'')+'" style="background-image:url('+g+')"><button class="rmg u" data-g="'+i+'">Remove</button></div>'}).join("");
+  var n=S.name||"Kzmi Cards",h=handle(),u="https://www.instagram.com/"+h+"/";
+  $("brand").textContent=n;$("fname").textContent=n;document.title=n+" | Football and F1 cards for sale";
+  $("dm").href=link();$("navig").href=u;$("hname").href=u;$("hname").textContent="@"+h;$("igbtn").href=u;$("igdm").href=link();$("igl").href=u;$("igl").textContent="Instagram @"+h;
+  var hd=document.querySelector(".hero");if(hero){hd.classList.add("photo");hd.style.setProperty("--hp","url("+hero+")")}else hd.classList.remove("photo");
+}
+$("chips").onclick=function(e){var c=e.target.getAttribute("data-c");if(c){filter=c;render()}};
+$("grid").onclick=function(e){var id=e.target.getAttribute("data-id");if(!id)return;cards=cards.filter(function(c){return String(c.id)!==id});sv("mc3_cards",cards);render();toast("Card removed")};
+$("gal").onclick=function(e){var i=e.target.getAttribute("data-g");if(i===null)return;gal.splice(+i,1);sv("mc3_gal",gal);render();toast("Photo removed")};
+$("tog").onclick=function(){var on=document.body.classList.toggle("edit");this.textContent=on?"Done":"Manage store";$("sname").value=S.name||"";$("wa").value=S.wa||"";$("ig").value=S.ig||DEF};
+["sname","wa","ig"].forEach(function(k){$(k).oninput=function(){S={name:$("sname").value,wa:$("wa").value,ig:$("ig").value};sv("mc_set",S);render()}});
+function shrink(file,max,cb){var r=new FileReader();r.onload=function(){var i=new Image();i.onload=function(){var s=Math.min(1,max/Math.max(i.width,i.height)),c=document.createElement("canvas");c.width=i.width*s;c.height=i.height*s;c.getContext("2d").drawImage(i,0,0,c.width,c.height);cb(c.toDataURL("image/jpeg",.75))};i.onerror=function(){cb("")};i.src=r.result};r.onerror=function(){cb("")};r.readAsDataURL(file)}
+$("f").onsubmit=function(e){e.preventDefault();
+  var add=function(img){cards.unshift({id:Date.now(),sport:$("sport").value,player:$("player").value.trim(),set:$("set").value.trim(),cat:$("cat").value,cond:$("cond").value,price:$("price").value,img:img});
+    if(!sv("mc3_cards",cards))toast("Storage is full, so this card may not be saved");else toast("Card added to the grid");
+    $("f").reset();render();$("player").focus()};
+  var f=$("img").files[0];f?shrink(f,600,add):add("")};
+$("hp").onchange=function(){var f=this.files[0];if(!f)return;shrink(f,1400,function(d){hero=d;sv("mc3_hero",hero);render();toast("Banner photo set")})};
+$("hpx").onclick=function(){hero="";sv("mc3_hero","");render();toast("Banner photo removed")};
+$("gp").onchange=function(){var f=this.files[0];if(!f)return;shrink(f,800,function(d){if(d){gal.push(d);sv("mc3_gal",gal);render();toast("Photo added to gallery")}})};
+var tt;function toast(m){var t=$("toast");t.textContent=m;t.classList.add("on");clearTimeout(tt);tt=setTimeout(function(){t.classList.remove("on")},2600)}
+function burst(x,y,sp){var em=sp==="F1"?["🏁","🏁","🏎️"]:sp==="Football"?["⚽","⚽","🥅"]:["⚽","🏁","🏎️"];
+  for(var i=0;i<14;i++){var d=document.createElement("span"),a=Math.random()*6.28,r=50+Math.random()*90;d.className="fx";d.textContent=em[i%em.length];d.style.left=x+"px";d.style.top=y+"px";d.style.setProperty("--dx",Math.cos(a)*r+"px");d.style.setProperty("--dy",Math.sin(a)*r-30+"px");document.body.appendChild(d);setTimeout(function(n){n.remove()},950,d)}}
+function ride(sp){var d=document.createElement("div");d.className="ride "+(sp==="F1"?"car":"ball");if(sp==="F1")d.innerHTML=CAR;else d.textContent="⚽";document.body.appendChild(d);setTimeout(function(){d.remove()},1700)}
+document.addEventListener("click",function(e){
+  var t=e.target.closest&&e.target.closest(".btn,.chip,.fc");if(!t)return;
+  var c=t.getAttribute("data-c"),sp=c&&c!=="All"?c:(t.classList.contains("r")||t.classList.contains("fb")?"F1":(t.classList.contains("g")||t.classList.contains("fa")?"Football":"mix"));
+  burst(e.clientX,e.clientY,sp);
+  if(c&&c!=="All")ride(c);
+  if(t.classList.contains("fc")){t.classList.remove("spin");void t.offsetWidth;t.classList.add("spin")}
+  if(t.classList.contains("buy")){var m=decodeURIComponent(t.getAttribute("data-msg")||"");try{navigator.clipboard.writeText(m)}catch(x){}toast("Message copied. Paste it in the Instagram DM")}
+});
+render();
+</script>
+</body>
+</html>
